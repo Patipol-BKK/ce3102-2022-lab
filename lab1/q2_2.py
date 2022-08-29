@@ -44,15 +44,18 @@ def main():
 
 	J = 3 # lets plot J cycles
 
-	fig, ax = plt.subplots(1, 2,figsize=(10, 3),constrained_layout=True)
-	ax[0].plot(t1,y1,label = 'continuous', color='red', linestyle='--', marker='.')
-	ax[0].plot(t2,y2,label = 'continuous', color='green', linestyle='--', marker='.')
+	fig, ax = plt.subplots(1, 2,figsize=(15, 2),constrained_layout=True)
+	ax[0].plot(t1,y1, color='red', linestyle='--', marker='.', markersize=8, label='y1')
+	ax[0].plot(t2,y2, color='green', linestyle='--', marker='.', markersize=8, label='y2')
+	ax[0].legend(loc="upper right")
 	ax[0].set_ylabel('y(n)')
 	ax[0].grid(True)
 
-	ax[1].plot(t3,y3,label = 'continuous', color='blue', linestyle='--', marker='.')
+	ax[1].plot(t3,y3, color='blue', linestyle='--', marker='.', markersize=8, label='y3')
+	ax[1].legend(loc="upper right")
 	ax[1].set_ylabel('y(n)')
 	ax[1].grid(True)
+	
 	plt.show()
 
 if __name__ == '__main__':
